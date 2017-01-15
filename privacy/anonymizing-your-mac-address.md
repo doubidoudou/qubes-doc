@@ -189,6 +189,7 @@ This approach to MAC Randomizing has been tested and used by some users as well 
 
 - This does not randomize your MAC Address on sleep and wake state (only on restarting the `sys-net` VM)
 - The `sys-net` networking VM takes longer for device drivers to start up than usual, this delayed startup may cause the first attempt of `sys-whonix` to connect to Tor to fail
+- Be aware that this don't work with fedora 24 templates, because NM override the spoofed MAC adress to the real one. Use macchanger (--show) or your router to see if the MAC is changed, because ifconfig don't show the used one.
 
 ## Disabling / Uninstalling Macchanger
 
